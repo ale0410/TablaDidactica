@@ -1,0 +1,7 @@
+{
+  "name": "tabla-didactica-2023",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

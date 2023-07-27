@@ -1,0 +1,135 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button size="large" expand="block" (click)="salir()">
+      <ion-icon slot="icon-only" size="large" name="exit"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<!--Faltaria los colores de los botones, los sonidos y un ion-header que solo tenga un boton para salir-->
+
+  <div class="col p-2" id="divCaballo">
+    <ion-button id="idCaballo" expand="block" class="h-100" color="brown" (click)="soundCaballo()"></ion-button>
+  </div>
+  <div class="col p-2" id="divCerdo">
+    <ion-button id="idCerdo" expand="block" class="h-100" color="pink" (click)="soundCerdo()"></ion-button>
+  </div>
+  <div class="col p-2" id="divPerro">
+    <ion-button id="idPerro" expand="block" class="h-100" color="white" (click)="soundPerro()"></ion-button>
+  </div>
+  <div class="col p-2" id="divGato">
+    <ion-button id="idGato" expand="block" class="h-100" color="black" (click)="soundGato()"></ion-button>
+  </div>
+  <div class="col p-2" id="divPajaro">
+    <ion-button id="idPajaro" expand="block" class="h-100" color="blue" (click)="soundPajaro()"></ion-button>
+  </div>
+  <div class="col p-2" id="divGallo">
+    <ion-button id="idGallo" expand="block" class="h-100" color="red" (click)="soundGallo()"></ion-button>
+  </div>
+
+
+<ion-content id="idContent" class="ion-padding">
+  <!-- <div [ngSwitch] = "temaSeleccionado" id="temaSeleccionado"> -->
+    <!-- <ng-container *ngSwitchCase= "'animales'" id="idAnimals" class="h-100 row row-cols-2 row-cols-md-3">
+      <div class="col p-2">
+        <ion-button id="idCaballo" expand="block" class="h-100" color="brown" (click)="soundCaballo()"></ion-button>
+      </div>
+      <div class="col p-2">
+        <ion-button id="idCerdo" expand="block" class="h-100" color="pink" (click)="soundCerdo()"></ion-button>
+      </div>
+      <div class="col p-2">
+        <ion-button id="idPerro" expand="block" class="h-100" color="white" (click)="soundPerro()"></ion-button>
+      </div>
+      <div class="col p-2">
+        <ion-button id="idGato" expand="block" class="h-100" color="black" (click)="soundGato()"></ion-button>
+      </div>
+      <div class="col p-2">
+        <ion-button id="idPajaro" expand="block" class="h-100" color="blue" (click)="soundPajaro()"></ion-button>
+      </div>
+      <div class="col p-2">
+        <ion-button id="idGallo" expand="block" class="h-100" color="red" (click)="soundGallo()"></ion-button>
+      </div>
+    </ng-container>
+  
+    <ng-container *ngSwitchCase="'numeros'" id="idNumbers" class="h-100 row row-cols-2 row-cols-md-3"> 
+      <div class="col p-2">
+        <ion-button id="idOne" expand="block" class="h-100" color="brown" (click)="soundOne()"></ion-button>
+      </div>
+      <div class="col p-2">
+        <ion-button id="idTwo" expand="block" class="h-100" color="pink" (click)="soundTwo()"></ion-button>
+      </div>
+      <div class="col p-2">
+        <ion-button id="idThree" expand="block" class="h-100" color="white" (click)="soundThree()"></ion-button>
+      </div>
+      <div class="col p-2">
+        <ion-button id="idFour" expand="block" class="h-100" color="black" (click)="soundFour()"></ion-button>
+      </div>
+      <div class="col p-2">
+        <ion-button id="idFive" expand="block" class="h-100" color="blue" (click)="soundFive()"></ion-button>
+      </div>
+      <div class="col p-2">
+        <ion-button id="idSix" expand="block" class="h-100" color="red" (click)="soundSix()"></ion-button>
+      </div>
+    </ng-container>
+  
+    <ng-container *ngSwitchCase="'colores'" id="idColors" class="h-100 row row-cols-2 row-cols-md-3"> 
+      <div class="col p-2">
+        <ion-button id="idOrange" expand="block" class="h-100" color="orange" (click)="soundOrange()"></ion-button>
+      </div>
+      <div class="col p-2">
+        <ion-button id="idBlue" expand="block" class="h-100" color="blue" (click)="soundBlue()"></ion-button>
+      </div>
+      <div class="col p-2">
+        <ion-button id="idPink" expand="block" class="h-100" color="pink" (click)="soundPink()"></ion-button>
+      </div>
+      <div class="col p-2">
+        <ion-button id="idYellow" expand="block" class="h-100" color="yellow" (click)="soundYellow()"></ion-button>
+      </div>
+      <div class="col p-2">
+        <ion-button id="idRed" expand="block" class="h-100" color="red" (click)="soundRed()"></ion-button>
+      </div>
+      <div class="col p-2">
+        <ion-button id="idGreen" expand="block" class="h-100" color="green" (click)="soundGreen()"></ion-button>
+      </div>
+    </ng-container> -->
+  <!-- </div> -->
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="chevron-up-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      Colores
+      <ion-fab-button id="idColor" (click)="seleccionarTema(temaSeleccionado = 'colores')">
+        <ion-icon name="color"></ion-icon> <!--Reemplazar estos ion-icon por una bandera-->
+      </ion-fab-button>
+      Números
+      <ion-fab-button id="idNumero" (click)="seleccionarTema(temaSeleccionado = 'numeros')">
+        <ion-icon name="number"></ion-icon>
+      </ion-fab-button>
+      Animales
+      <ion-fab-button id="idAnimal" (click)="seleccionarTema(temaSeleccionado = 'animales')">
+        <ion-icon name="animal"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="start">
+    <ion-fab-button>
+      <ion-icon name="chevron-up-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      Español
+      <ion-fab-button>
+        <ion-icon name="español"></ion-icon> <!--Reemplazar estos ion-icon por una bandera-->
+      </ion-fab-button>
+      Ingles
+      <ion-fab-button>
+        <ion-icon name="ingles"></ion-icon>
+      </ion-fab-button>
+      Portugues
+      <ion-fab-button>
+        <ion-icon name="portugues"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "app2tabladidactica"
+  },
+  "targets": {
+    "app2tabladidactica": {
+      "hosting": {
+        "app": [
+          "app2tabladidactica"
+        ]
+      }
+    }
+  }
+}
