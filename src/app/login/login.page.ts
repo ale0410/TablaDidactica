@@ -26,7 +26,7 @@ export class LoginPage {
        this.spinner = true;  /** Pone el spinner como true */
        this.auth.signIn(form.form.value.email, form.form.value.password)  /** Llama a la función signIn de AuthService */
          .then(() => {
-              this.router.navigateByUrl('/admin');  /** Va derecho a la página de admin */
+              this.router.navigateByUrl('/home');  /** Va derecho a la página de home */
          })
          .catch((error) => (this.error = error))
          .finally(() => {

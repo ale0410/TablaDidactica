@@ -13,23 +13,23 @@
       <div id="idForm">
         <ion-list>
   
-          <ion-item>
-            <ion-label position="stacked" color="primary">Correo</ion-label>
+          <div class=ion-item>
+            <ion-label position="stacked" color="black">Correo</ion-label>
             <ion-input [(ngModel)]="login.email" name="email" type="text" #mail="ngModel" spellcheck="false"
               autocapitalize="off" required> <!--Que reciba un formulario, crear en el ts un form control con los dos controles, hacer la validacion desde el ts-->
             </ion-input> <!--Aplicarles estilos a todos los inputs, botones de acceso rapido que no sean textos sino botones -->
-          </ion-item>
+          </div>
           <ion-text color="danger">
             <p [hidden]="mail.valid || submitted === false" class="ion-padding-start">
               Por favor, ingrese su Correo Electrónico.
             </p>
           </ion-text>
     
-          <ion-item>
-            <ion-label position="stacked" color="primary">Contraseña</ion-label>
+          <div class=ion-item>
+            <ion-label position="stacked" color="black">Contraseña</ion-label>
             <ion-input [(ngModel)]="pass" name="password" type="password" #password="ngModel" minlength=6 required>
             </ion-input>
-          </ion-item>
+          </div>
           <ion-text color="danger">
             <p [hidden]="!password.errors || submitted === false" class="ion-padding-start">
               La contraseña ingresada es muy corta.
@@ -49,9 +49,9 @@
           </ion-col>
         </ion-row>
     
-        <ion-fab vertical="center" horizontal="end" slot="fixed">
+        <ion-fab vertical="center" horizontal="start" slot="fixed">
           <ion-fab-button>
-            <ion-icon name="chevron-forward"></ion-icon>
+            <ion-icon name="add"></ion-icon>
           </ion-fab-button>
           <ion-fab-list side="bottom">
             Admin

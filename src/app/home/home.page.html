@@ -1,21 +1,106 @@
-<ion-header [translucent]="true">
-  <div id="idInicio">
-    <ion-toolbar>
-      <ion-title>
-        Inicio
-      </ion-title>
-    </ion-toolbar>
-  </div>
-</ion-header>
 <ion-content [fullscreen]="true">
-  <div id="container">
-    <ion-row id="idRow">
-      <ion-col text-center id="idButtonLogin">
-        <ion-button href="/login" expand="block">Logueate</ion-button>
-      </ion-col>
-      <ion-col text-center id="idButtonRegister">
-        <ion-button href="/register" expand="block">Registrate</ion-button>
-      </ion-col>
-    </ion-row>
+  <div class="container-img">
+    <ion-fab slot="fixed" vertical="top" horizontal="end">
+      <ion-fab-button (click)="logout()" class="ion-float-right">
+        <ion-img src="../../assets/images/salida.png" class="fab-image"></ion-img>
+      </ion-fab-button>
+    </ion-fab>
+    <ion-fab slot="fixed" vertical="top" horizontal="start">
+      <ion-fab-button>
+        <ion-img [src]="imgPais"  class="fab-image"></ion-img>
+      </ion-fab-button>
+      <ion-fab-list side="end" style="background-color: transparent;">
+        <ion-fab-button>
+          <ion-img (click)="seleccionarIdioma('españa')" src="../../assets/pais/espana.png" class="fab-image"></ion-img>
+        </ion-fab-button>
+        <ion-fab-button>
+          <ion-img (click)="seleccionarIdioma('portugal')" src="../../assets/pais/portugal.png" class="fab-image"></ion-img>
+        </ion-fab-button>
+        <ion-fab-button>
+          <ion-img (click)="seleccionarIdioma('reinoUnido')" src="../../assets/pais/reino-unido.png" class="fab-image"></ion-img>
+        </ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
+    
+    <ion-grid class="botones-container ion-hide-md-up">
+      <ion-row>
+        <ion-col size="6" size-md="4">
+          <ion-button expand="full" (click)="traducir(0)">
+            <ion-img src="{{imgApp[0]}}" class="boton-imagen"></ion-img>
+          </ion-button>
+        </ion-col>
+        <ion-col size="6" size-md="4">
+          <ion-button expand="full" (click)="traducir(1)">
+            <ion-img src="{{imgApp[1]}}" class="boton-imagen"></ion-img>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="6" size-md="4" class="ion-text-center">
+          <ion-button expand="full" (click)="traducir(2)">
+            <ion-img src="{{imgApp[2]}}" class="boton-imagen"></ion-img>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6" >
+          <ion-button expand="full" (click)="traducir(3)">
+            <ion-img src="{{imgApp[3]}}" class="boton-imagen"></ion-img>
+          </ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <ion-button expand="full" (click)="traducir(4)">
+            <ion-img src="{{imgApp[4]}}" class="boton-imagen"></ion-img>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid class="botones-horizontal ion-hide-sm-down">
+      <ion-row>
+        <ion-col size="4">
+          <ion-button expand="full" (click)="traducir(0)">
+            <ion-img src="{{imgApp[0]}}" class="boton-imagen"></ion-img>
+          </ion-button>
+        </ion-col>
+        <ion-col size="4">
+          <ion-button expand="full" (click)="traducir(1)">
+            <ion-img src="{{imgApp[1]}}" class="boton-imagen"></ion-img>
+          </ion-button>
+        </ion-col>
+        <ion-col size="4">
+          <ion-button expand="full" (click)="traducir(2)">
+            <ion-img src="{{imgApp[2]}}" class="boton-imagen"></ion-img>
+          </ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <ion-button expand="full" (click)="traducir(3)">
+            <ion-img src="{{imgApp[3]}}" class="boton-imagen"></ion-img>
+          </ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <ion-button expand="full" (click)="traducir(4)">
+            <ion-img src="{{imgApp[4]}}" class="boton-imagen"></ion-img>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+    <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+      <ion-fab-button>
+        <ion-img [src]="imgTema" class="fab-image"></ion-img>
+      </ion-fab-button>
+      <ion-fab-list side="top">
+        <ion-fab-button>
+          <ion-img (click)="seleccionarTipo('numero')" src="../../assets/icon/1.png" class="fab-image"></ion-img>
+        </ion-fab-button>
+        <ion-fab-button>
+          <ion-img (click)="seleccionarTipo('color')" src="../../assets/icon/color.png" class="fab-image"></ion-img>
+        </ion-fab-button>
+        <ion-fab-button>
+          <ion-img (click)="seleccionarTipo('animal')" src="../../assets/icon/leon.png" class="fab-image"></ion-img>
+        </ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
   </div>
 </ion-content>
