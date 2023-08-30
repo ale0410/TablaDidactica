@@ -13,13 +13,13 @@ export class HomePage implements OnInit {
   tema: string = 'numero';
   pais: number = 0;
 
-  imgNum: string[]= ["../../assets/tema/1.png","dos../../assets/tema/2.png","../../assets/tema/3.png","../../assets/tema/4.png","../../assets/tema/5.png"]; 
-  imgAnimales: string[]= ["../../assets/tema/caballo.png","../../assets/tema/leon.png","../../assets/tema/aguila.png","../../assets/tema/elefante.png", "../../assets/tema/gato.png"]; 
+  imgNum: string[]= ["../../assets/numbers/Numero-1.png","dos../../assets/numbers/Numero-2.png","../../assets/numbers/Numero-3.png","../../assets/numbers/Numero-4.png","../../assets/numbers/Numero-5.png"]; 
+  imgAnimales: string[]= ["../../assets/Caballo.png","../../assets/Leon.png","../../assets/Aguila.png","../../assets/Elefante.png", "../../assets/Gato.png"]; 
   imgColores: string[]= ["../../assets/tema/rojo.png","../../assets/tema/azul.png","../../assets/tema/verde.png","../../assets/tema/amarillo.png","../../assets/tema/negro.png"]; 
   imgApp: string[] = this.imgNum;
 
-  imgPais = '../../assets/pais/espana.png';
-  imgTema = '../../assets/icon/1.png';
+  imgPais = '../../assets/pais/español.png';
+  imgTema = '../../assets/numbers/Numero-1.png';
 
   numeros: any[] = [
     ["../../assets/audio/uno.m4a","../../assets/audio/dos.m4a","../../assets/audio/tres.m4a", "../../assets/audio/cuatro.m4a", "../../assets/audio/cinco.m4a"],
@@ -49,13 +49,13 @@ export class HomePage implements OnInit {
   seleccionarIdioma(idioma: string){
     if (idioma === 'españa') {
       this.pais = 0;
-      this.imgPais = "../../assets/pais/espana.png";
+      this.imgPais = "../../assets/pais/español.png";
     } else if (idioma === 'portugal') {
       this.pais = 1;
-      this.imgPais = "../../assets/pais/portugal.png";
+      this.imgPais = "../../assets/pais/portugues.png";
     } else if (idioma === 'reinoUnido') {
       this.pais = 2;
-      this.imgPais = "../../assets/pais/reino-unido.png";
+      this.imgPais = "../../assets/pais/ingles.png";
     }
   }
   async traducir(numero: number){
@@ -79,17 +79,17 @@ export class HomePage implements OnInit {
     switch(tema){
       case "color":
         this.tema = tema;
-        this.imgTema = '../../assets/icon/color.png';
+        this.imgTema = '../../assets/icon/color2.jpg';
         this.imgApp = this.imgColores;
         break;
       case "animal":
         this.tema = tema;
-        this.imgTema = '../../assets/icon/leon.png';
+        this.imgTema = '../../assets/Leon.png';
         this.imgApp = this.imgAnimales;
         break;
       case "numero":
         this.tema = tema;
-        this.imgTema = '../../assets/icon/1.png';
+        this.imgTema = '../../assets/numbers/Numero-1.png';
         this.imgApp = this.imgNum;
         break;      
     }
