@@ -79,7 +79,7 @@ export class HomePage implements OnInit {
     switch(tema){
       case "color":
         this.tema = tema;
-        this.imgTema = '../../assets/icon/color2.jpg';
+        this.imgTema = '../../assets/icon/color2.png';
         this.imgApp = this.imgColores;
         break;
       case "animal":

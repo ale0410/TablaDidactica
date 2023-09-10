@@ -3,12 +3,13 @@
 }
 
 #idForm{
-    background-color: #6a2e04;
-    padding: 118px 40px;
+    align-items: center;
+    background-image: url('../../assets/images/fondoEstrellas.jpg');
+    padding: 8px 90px;
 }
 
 #idFound{
-    background-color: #e4792c;
+    background-image: url('../../assets/images/fondoEstrellas.jpg');
     padding: 250px 40px;
 }
 
@@ -16,21 +17,17 @@
     background-color: rgb(237, 237, 110);
 }
 
-ion-list{
-    background-color: red;
-
-    .ion-item{
-        background-color: rgb(128, 0, 124);
-    }
-}
-
 ion-input{
-    background-color: pink;
+    background-color: lightblue;
+    color: rgb(57, 56, 56);
 }
 
 ion-button{
-    align-items: center;
+    align-items:center;
     width: 233px;
-    height: 200px;
+    height: 50px;
     padding: 8px 5px;
+    color: black;
+    font-size: medium;
+    font-style:oblique;
 }

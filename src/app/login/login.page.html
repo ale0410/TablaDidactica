@@ -2,34 +2,30 @@
 <ion-content>
 
   <div id="idFound">
-    <div *ngIf="spinner">
+    <!-- <div *ngIf="spinner">
       spinnerr
-    </div>
+    </div> -->
     <div *ngIf="error">
       {{error}}
     </div>
   
     <form *ngIf="!spinner" #loginForm="ngForm" novalidate>
       <div id="idForm">
-        <ion-list>
   
-          <div class=ion-item>
-            <ion-label position="stacked" color="black">Correo</ion-label>
-            <ion-input [(ngModel)]="login.email" name="email" type="text" #mail="ngModel" spellcheck="false"
+          
+          <ion-input [(ngModel)]="login.email" name="email" type="text" #mail="ngModel" spellcheck="false"
               autocapitalize="off" required> <!--Que reciba un formulario, crear en el ts un form control con los dos controles, hacer la validacion desde el ts-->
-            </ion-input> <!--Aplicarles estilos a todos los inputs, botones de acceso rapido que no sean textos sino botones -->
-          </div>
+          </ion-input> <!--Aplicarles estilos a todos los inputs, botones de acceso rapido que no sean textos sino botones -->
           <ion-text color="danger">
             <p [hidden]="mail.valid || submitted === false" class="ion-padding-start">
               Por favor, ingrese su Correo Electrónico.
             </p>
           </ion-text>
     
-          <div class=ion-item>
-            <ion-label position="stacked" color="black">Contraseña</ion-label>
-            <ion-input [(ngModel)]="pass" name="password" type="password" #password="ngModel" minlength=6 required>
-            </ion-input>
-          </div>
+          <br>
+          <ion-input [(ngModel)]="pass" name="password" type="password" #password="ngModel" minlength=6 required>
+          </ion-input>
+          
           <ion-text color="danger">
             <p [hidden]="!password.errors || submitted === false" class="ion-padding-start">
               La contraseña ingresada es muy corta.
@@ -41,41 +37,19 @@
             </p>
           </ion-text>
     
-        </ion-list>
-    
         <ion-row>
-          <ion-col>
             <ion-button (click)="onLogin(loginForm)" type="submit" expand="block">Ingresar</ion-button>
-          </ion-col>
+            <ion-button (click)="admin()">Admin
+            </ion-button>
+            <ion-button (click)="invitado()" expand="block">Invitado
+            </ion-button>
+            <ion-button (click)="usuario()" expand="block">Usuario
+            </ion-button>
+            <ion-button (click)="anonimo()" expand="block">Anonimo
+            </ion-button>
+            <ion-button (click)="tester()" expand="block">Tester
+            </ion-button>
         </ion-row>
-    
-        <ion-fab vertical="center" horizontal="start" slot="fixed">
-          <ion-fab-button>
-            <ion-icon name="add"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-list side="bottom">
-            Admin
-            <ion-fab-button>
-              <ion-icon name="person" (click)="admin()"></ion-icon>
-            </ion-fab-button>
-            Invitado
-            <ion-fab-button>
-              <ion-icon name="person" (click)="invitado()"></ion-icon>
-            </ion-fab-button>
-            Usuario
-            <ion-fab-button>
-              <ion-icon name="person" (click)="usuario()"></ion-icon>
-            </ion-fab-button>
-            Anonimo
-            <ion-fab-button>
-              <ion-icon name="person" (click)="anonimo()"></ion-icon>
-            </ion-fab-button>
-            Tester
-            <ion-fab-button>
-              <ion-icon name="person" (click)="tester()"></ion-icon>
-            </ion-fab-button>
-          </ion-fab-list>
-        </ion-fab>
 
       </div>
     </form>
