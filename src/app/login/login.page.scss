@@ -2,7 +2,7 @@
     color : red;
 }
 
-#idForm{
+form{
     align-items: center;
     background-image: url('../../assets/images/fondoEstrellas.jpg');
     padding: 8px 90px;
@@ -17,16 +17,21 @@
     background-color: rgb(237, 237, 110);
 }
 
+ion-label{
+    background-color: greenyellow;
+    
+}
+
 ion-input{
     background-color: lightblue;
     color: rgb(57, 56, 56);
+    width: 180px;
 }
 
 ion-button{
     align-items:center;
-    width: 233px;
-    height: 50px;
-    padding: 8px 5px;
+    width: 210px;
+    height: 70px;
     color: black;
     font-size: medium;
     font-style:oblique;

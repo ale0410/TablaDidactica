@@ -10,11 +10,10 @@
     </div>
   
     <form *ngIf="!spinner" #loginForm="ngForm" novalidate>
-      <div id="idForm">
   
-          
+          <ion-label>Correo</ion-label>
           <ion-input [(ngModel)]="login.email" name="email" type="text" #mail="ngModel" spellcheck="false"
-              autocapitalize="off" required> <!--Que reciba un formulario, crear en el ts un form control con los dos controles, hacer la validacion desde el ts-->
+              autocapitalize="off" expand="block" required> <!--Que reciba un formulario, crear en el ts un form control con los dos controles, hacer la validacion desde el ts-->
           </ion-input> <!--Aplicarles estilos a todos los inputs, botones de acceso rapido que no sean textos sino botones -->
           <ion-text color="danger">
             <p [hidden]="mail.valid || submitted === false" class="ion-padding-start">
@@ -23,7 +22,8 @@
           </ion-text>
     
           <br>
-          <ion-input [(ngModel)]="pass" name="password" type="password" #password="ngModel" minlength=6 required>
+          <ion-label>Contraseña</ion-label>
+          <ion-input [(ngModel)]="pass" name="password" type="password" #password="ngModel" minlength=6 expand="block" required>
           </ion-input>
           
           <ion-text color="danger">
@@ -39,7 +39,7 @@
     
         <ion-row>
             <ion-button (click)="onLogin(loginForm)" type="submit" expand="block">Ingresar</ion-button>
-            <ion-button (click)="admin()">Admin
+            <ion-button (click)="admin()" expand="block">Admin
             </ion-button>
             <ion-button (click)="invitado()" expand="block">Invitado
             </ion-button>
@@ -51,7 +51,6 @@
             </ion-button>
         </ion-row>
 
-      </div>
     </form>
   </div>
 
