@@ -17,8 +17,15 @@ form{
     background-color: rgb(237, 237, 110);
 }
 
+ion-title{
+    background-color: greenyellow;
+    font-size: x-large;
+    font-style: italic;
+}
+
 ion-label{
     background-color: greenyellow;
+    font-style: italic;
     
 }
 
@@ -26,6 +33,7 @@ ion-input{
     background-color: lightblue;
     color: rgb(57, 56, 56);
     width: 180px;
+    font-style: italic;
 }
 
 ion-button{
