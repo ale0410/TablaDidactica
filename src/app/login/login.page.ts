@@ -15,6 +15,7 @@ export class LoginPage {
   login = userDb;
   pass!: string;
   submitted = false;
+  mostrarSpinner: boolean = false;
   spinner = false;
   error = '';
 
@@ -24,6 +25,19 @@ export class LoginPage {
      this.submitted = true;
      if (form.valid) {  /** Pregunta si el formulario es válido */
       //  this.spinner = true;  /** Pone el spinner como true */
+      // Muestra el spinner al hacer clic en "Iniciar Sesión"
+    this.mostrarSpinner = true;
+
+    // Aquí puedes agregar tu lógica para iniciar sesión, como realizar una solicitud HTTP.
+
+    // Simula una demora de 2 segundos para demostración
+    setTimeout(() => {
+      // Oculta el spinner después de que se complete la lógica de inicio de sesión
+      this.mostrarSpinner = false;
+
+      // Agrega aquí la lógica para redirigir al usuario después de iniciar sesión
+    }, 2000);
+    
        this.auth.signIn(form.form.value.email, form.form.value.password)  /** Llama a la función signIn de AuthService */
          .then(() => {
               this.router.navigateByUrl('/home');  /** Va derecho a la página de home */

@@ -39,7 +39,8 @@
           </ion-text>
     
         <ion-row>
-            <ion-button (click)="onLogin(loginForm)" type="submit" expand="block">Ingresar</ion-button>
+            <ion-button (click)="onLogin(loginForm)" type="submit" expand="block" [disabled]="mostrarSpinner">Ingresar</ion-button>
+            <ion-spinner name="crescent" *ngIf="mostrarSpinner" class="full-screen-spinner"></ion-spinner>
             <ion-button (click)="admin()" expand="block">Admin
             </ion-button>
             <ion-button (click)="invitado()" expand="block">Invitado
